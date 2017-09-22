@@ -62,7 +62,7 @@ if (
             ' '
             "Install module from [PowerShell Gallery](https://www.powershellgallery.com/packages/$env:ModuleName/$env:ModuleVersion)"
             ' '
-            "See build output at [AppVeyor](https://ci.appveyor.com/project/$env:GitHubOwner/$env:GitHubRepo/build/$env:APPVEYOR_BUILD_NUMBER="
+            "See build output at [AppVeyor](https://ci.appveyor.com/project/$env:GitHubOwner/$env:GitHubRepo/build/$env:APPVEYOR_BUILD_NUMBER)"
             ' '
             "See test coverage at [Coveralls](https://coveralls.io/github/$env:GitHubOwner/$env:GitHubRepo)"
         )
