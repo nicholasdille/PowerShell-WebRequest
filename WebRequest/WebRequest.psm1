@@ -4,7 +4,7 @@
 #    $global:CachePreference = 'Cache'
 #}
 if (-Not $CachePreference) {
-    $CachePreference = 'Cache'
+    $CachePreference = 'ByPass'
 }
 Export-ModuleMember -Variable 'CachePreference'
 
