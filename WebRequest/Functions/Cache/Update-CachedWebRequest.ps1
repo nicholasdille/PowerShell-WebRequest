@@ -1,16 +1,30 @@
 function Update-CachedWebRequest {
-    [CmdletBinding()]
+    [CmdletBinding(SupportsShouldProcess)]
     param()
-
-    $ExpiredUri = @()
-    $CachedUri = $script:Cache.Keys
-    foreach ($Uri in $CachedUri) {
-        $Item = $script:Cache.Item($Uri)
-        if ($Item.Timestamp.AddSeconds($CacheLifetime) -lt [datetime]::UtcNow) {
-            $ExpiredUri += $Uri
+    
+    begin {
+        if (-not $PSBoundParameters.ContainsKey('Confirm')) {
+            $ConfirmPreference = $PSCmdlet.SessionState.PSVariable.GetValue('ConfirmPreference')
+        }
+        if (-not $PSBoundParameters.ContainsKey('WhatIf')) {
+            $WhatIfPreference = $PSCmdlet.SessionState.PSVariable.GetValue('WhatIfPreference')
         }
     }
-    foreach ($Uri in $ExpiredUri) {
-        Remove-CachedWebRequest -Uri $Uri
+
+    process {
+        $ExpiredUri = @()
+        $CachedUri = $script:Cache.Keys
+        foreach ($Uri in $CachedUri) {
+            $Item = $script:Cache.Item($Uri)
+            if ($Item.Timestamp.AddSeconds($CacheLifetime) -lt [datetime]::UtcNow) {
+                $ExpiredUri += $Uri
+            }
+        }
+
+        if ($Force -or $PSCmdlet.ShouldProcess("ShouldProcess?")) {
+            foreach ($Uri in $ExpiredUri) {
+                Remove-CachedWebRequest -Uri $Uri
+            }
+        }
     }
 }
