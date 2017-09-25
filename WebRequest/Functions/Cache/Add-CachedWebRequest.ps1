@@ -19,7 +19,7 @@ function Add-CachedWebRequest {
     if ($script:Cache.ContainsKey($Uri)) {
         $Item = $script:Cache.Item($Uri)
 
-        if ($Item.Timestamp.AddSeconds($global:CacheLifetime) -ge [datetime]::UtcNow) {
+        if ($Item.Timestamp.AddSeconds($CacheLifetime) -ge [datetime]::UtcNow) {
             $Item.Timestamp = [datetime]::UtcNow
         
         } else {

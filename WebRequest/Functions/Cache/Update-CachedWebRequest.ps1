@@ -6,7 +6,7 @@ function Update-CachedWebRequest {
     $CachedUri = $script:Cache.Keys
     foreach ($Uri in $CachedUri) {
         $Item = $script:Cache.Item($Uri)
-        if ($Item.Timestamp.AddSeconds($global:CacheLifetime) -lt [datetime]::UtcNow) {
+        if ($Item.Timestamp.AddSeconds($CacheLifetime) -lt [datetime]::UtcNow) {
             $ExpiredUri += $Uri
         }
     }

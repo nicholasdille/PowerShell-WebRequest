@@ -10,7 +10,7 @@ function Get-CachedWebRequest {
     if ($PSBoundParameters.ContainsKey('Uri')) {
         $Item = $script:Cache.Item($Uri)
         if ($Item) {
-            if ($Item.Timestamp.AddSeconds($global:CacheLifetime) -ge [datetime]::UtcNow) {
+            if ($Item.Timestamp.AddSeconds($CacheLifetime) -ge [datetime]::UtcNow) {
                 $Item.Response
             }
         }
