@@ -30,7 +30,8 @@ if (
     $env:BHModulePath -and
     $env:BHBuildSystem -eq 'AppVeyor' -and
     $env:APPVEYOR_REPO_PROVIDER -eq 'gitHub' -and
-    $env:BHCommitMessage -match '!release'
+    $env:BHCommitMessage -match '!release' -and
+    $env:GitHubToken
 )
 {
     $AssetName = "$env:ModuleName-$env:ModuleVersion.zip"
