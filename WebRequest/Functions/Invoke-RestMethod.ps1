@@ -1,5 +1,3 @@
-#requires -Modules Helper
-
 function Invoke-RestMethod {
     [CmdletBinding(HelpUri='http://go.microsoft.com/fwlink/?LinkID=217034')]
     param(
@@ -103,7 +101,7 @@ function Invoke-RestMethod {
             $Headers = @{}
         }
         if ($User -and $Token -and -not $Headers.ContainsKey('Authorization')) {
-            $AuthString = ConvertTo-Base64 -Data "$($User):$Token" -Encoding ASCII
+            $AuthString = Get-BasicAuthentication -User $User -Token $Token
             $null = $Headers.Add('Authorization', "$Authentication $AuthString")
         }
 

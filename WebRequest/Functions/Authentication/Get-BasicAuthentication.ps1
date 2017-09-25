@@ -1,4 +1,4 @@
-#requires -Modules Helper
+#requires -Modules Helpers
 
 function Get-BasicAuthentication {
     [CmdletBinding()]
