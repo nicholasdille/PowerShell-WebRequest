@@ -1,5 +1,5 @@
 function Update-CachedWebRequest {
-    [CmdletBinding(SupportsShouldProcess)]
+    [CmdletBinding(SupportsShouldProcess, ConfirmImpact='Low')]
     param()
     
     begin {
@@ -21,7 +21,7 @@ function Update-CachedWebRequest {
             }
         }
 
-        if ($Force -or $PSCmdlet.ShouldProcess("ShouldProcess?")) {
+        if ($Force -or $PSCmdlet.ShouldProcess("Remove expired URLs from the cache?")) {
             foreach ($Uri in $ExpiredUri) {
                 Remove-CachedWebRequest -Uri $Uri
             }

@@ -1,5 +1,5 @@
 function Clear-CachedWebRequest {
-    [CmdletBinding(SupportsShouldProcess)]
+    [CmdletBinding(SupportsShouldProcess, ConfirmImpact='High')]
     param()
 
     begin {
@@ -12,7 +12,7 @@ function Clear-CachedWebRequest {
     }
 
     process {
-        if ($Force -or $PSCmdlet.ShouldProcess("ShouldProcess?")) {
+        if ($Force -or $PSCmdlet.ShouldProcess("Remove all items from the WebRequest cache?")) {
             $script:Cache = @{}
         }
     }

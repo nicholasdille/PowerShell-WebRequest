@@ -1,5 +1,5 @@
 function Remove-CachedWebRequest {
-    [CmdletBinding(SupportsShouldProcess)]
+    [CmdletBinding(SupportsShouldProcess, ConfirmImpact='Medium')]
     param(
         [Parameter(Mandatory)]
         [ValidateNotNullOrEmpty()]
@@ -17,7 +17,7 @@ function Remove-CachedWebRequest {
     }
 
     process {
-        if ($Force -or $PSCmdlet.ShouldProcess("ShouldProcess?")) {
+        if ($Force -or $PSCmdlet.ShouldProcess("Remove URL '$Uri' from cache?")) {
             $null = $script:Cache.Remove($Uri)
         }
     }
