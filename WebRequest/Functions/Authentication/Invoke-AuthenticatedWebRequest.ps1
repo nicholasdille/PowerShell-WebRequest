@@ -33,7 +33,7 @@ function Invoke-AuthenticatedWebRequest {
     )
 
     if ($User -and $Token -and -not $Headers.ContainsKey('Authorization')) {
-        $AuthString = ConvertTo-Base64 -Data "$($User):$Token" -Encoding ASCII
+        $AuthString = Get-BasicAuthentication -User $User -Token $Token
         $Headers.Add('Authorization', "$Scheme $AuthString")
     }
 
