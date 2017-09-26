@@ -1,0 +1,5 @@
+WebRequest/en-US/*.xml
+*.zip
+*.clixml
+TestResults*.xml
+CodeCoverage*.json
