@@ -1,6 +1,8 @@
-# 0.1.5
+# 0.1.12
 
 - Changed default behaviour to bypass cache
+- Updated build tools
+- Improved quality by using script analyzer
 
 # 0.1.4
 
