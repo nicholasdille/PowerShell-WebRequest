@@ -1,3 +1,7 @@
+# 0.1.14
+
+- Added documentation
+
 # 0.1.12
 
 - Changed default behaviour to bypass cache
