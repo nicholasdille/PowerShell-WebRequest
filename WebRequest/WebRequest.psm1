@@ -1,4 +1,17 @@
-﻿# Whether to use the cache
+﻿# Which proxy to use
+if (-Not $ProxyServer) {
+    $ProxyServer = ''
+}
+Export-ModuleMember -Variable 'ProxyServer'
+
+# Whether to use the proxy
+# Valid values: Proxy, Direct
+if (-Not $ProxyPreference) {
+    $ProxyPreference = 'Direct'
+}
+Export-ModuleMember -Variable 'ProxyPreference'
+
+# Whether to use the cache
 # Valid values: Cache, ByPass
 #if (-Not $global:CachePreference) {
 #    $global:CachePreference = 'Cache'
