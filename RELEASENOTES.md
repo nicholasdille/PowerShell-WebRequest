@@ -1,3 +1,7 @@
+# 0.1.17
+
+- Added proxy support
+
 # 0.1.14
 
 - Added documentation
