@@ -1,6 +1,6 @@
 @{
     RootModule = 'WebRequest.psm1'
-    ModuleVersion = '0.1.4'
+    ModuleVersion = '0.1'
     GUID = '5480cbcb-78f7-42d6-846d-9990598b7bd1'
     Author = 'Nicholas Dille'
     #CompanyName = ''
