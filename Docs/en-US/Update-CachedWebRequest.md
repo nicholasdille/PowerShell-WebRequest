@@ -3,25 +3,27 @@ external help file: WebRequest-help.xml
 online version: http://go.microsoft.com/fwlink/?LinkID=217035
 schema: 2.0.0
 ---
-
 # Update-CachedWebRequest
 
 ## SYNOPSIS
+
 Removes expired items from the cache
 
 ## SYNTAX
 
-```
+```powershell
 Update-CachedWebRequest [-WhatIf] [-Confirm]
 ```
 
 ## DESCRIPTION
+
 Enumerates the cached response objects and removes expires items
 
 ## EXAMPLES
 
 ### Example 1
-```
+
+```powershell
 PS C:\> Update-CachedWebRequest
 ```
 
@@ -30,6 +32,7 @@ Removes all expired items from the cache
 ## PARAMETERS
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -45,6 +48,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -64,7 +68,6 @@ Accept wildcard characters: False
 
 ### None
 
-
 ## OUTPUTS
 
 ### System.Object
@@ -72,4 +75,3 @@ Accept wildcard characters: False
 ## NOTES
 
 ## RELATED LINKS
-

@@ -3,19 +3,20 @@ external help file: WebRequest-help.xml
 online version: 
 schema: 2.0.0
 ---
-
 # Invoke-CachedWebRequest
 
 ## SYNOPSIS
+
 Wrapper for `Invoke-WebRequest` adding caching of the response object
 
 ## SYNTAX
 
-```
+```powershell
 Invoke-CachedWebRequest [-UseBasicParsing] [-Uri] <String> [[-Method] <WebRequestMethod>] [[-Proxy] <String>]
 ```
 
 ## DESCRIPTION
+
 The first call fetches the specified URI and stores it in the cacahe to speed up later requests. The behaviour is controlled by the following variables:
 
 - `$CachePreference` defines if the cache is used at all. Possible values are `Cache` and `ByPass`
@@ -27,12 +28,13 @@ The first call fetches the specified URI and stores it in the cacahe to speed up
 ## PARAMETERS
 
 ### -Method
+
 Method for the HTTP request
 
 ```yaml
 Type: WebRequestMethod
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Default, Get, Head, Post, Put, Delete, Trace, Options, Merge, Patch
 
 Required: False
@@ -43,12 +45,13 @@ Accept wildcard characters: False
 ```
 
 ### -Proxy
+
 Proxy server to be used for the request
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -58,12 +61,13 @@ Accept wildcard characters: False
 ```
 
 ### -Uri
+
 URI to be requested
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -73,12 +77,13 @@ Accept wildcard characters: False
 ```
 
 ### -UseBasicParsing
+
 Whether to use basic parsing only
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -91,7 +96,6 @@ Accept wildcard characters: False
 
 ### None
 
-
 ## OUTPUTS
 
 ### System.Object
@@ -99,4 +103,3 @@ Accept wildcard characters: False
 ## NOTES
 
 ## RELATED LINKS
-

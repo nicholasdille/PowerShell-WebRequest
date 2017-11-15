@@ -3,25 +3,27 @@ external help file: WebRequest-help.xml
 online version: 
 schema: 2.0.0
 ---
-
 # Clear-CachedWebRequest
 
 ## SYNOPSIS
+
 Remove all items from the response cache
 
 ## SYNTAX
 
-```
+```powershell
 Clear-CachedWebRequest [-WhatIf] [-Confirm]
 ```
 
 ## DESCRIPTION
+
 All items will be purged from the cache regardless of their remaining lifetime
 
 ## EXAMPLES
 
 ### Example 1
-```
+
+```powershell
 PS C:\> Clear-CachedWebRequest
 ```
 
@@ -30,6 +32,7 @@ All cached items are removed
 ## PARAMETERS
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -45,6 +48,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -64,7 +68,6 @@ Accept wildcard characters: False
 
 ### None
 
-
 ## OUTPUTS
 
 ### System.Object
@@ -72,4 +75,3 @@ Accept wildcard characters: False
 ## NOTES
 
 ## RELATED LINKS
-

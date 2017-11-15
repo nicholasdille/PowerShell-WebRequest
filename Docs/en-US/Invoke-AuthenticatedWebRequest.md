@@ -3,26 +3,28 @@ external help file: WebRequest-help.xml
 online version: 
 schema: 2.0.0
 ---
-
 # Invoke-AuthenticatedWebRequest
 
 ## SYNOPSIS
+
 Wrapper for Invoke-WebRequest adding basic authentication
 
 ## SYNTAX
 
-```
+```powershell
 Invoke-AuthenticatedWebRequest [-Uri] <String> [[-Method] <WebRequestMethod>] [[-Headers] <Hashtable>]
  [[-Scheme] <String>] [-User] <String> [-Token] <String>
 ```
 
 ## DESCRIPTION
+
 Using the parameters `-User` and `-Token` the function adds a HTTP header to the request for the basic authentication scheme
 
 ## EXAMPLES
 
 ### Example 1
-```
+
+```powershell
 PS C:\> Invoke-AuthenticatedWebRequest -Uri 'https://myserver.mydomain.com' -User 'myuser' -Token '43c2fcbacdd042f1'
 ```
 
@@ -31,12 +33,13 @@ The above call adds the `Authorization` header to the HTTP request before callin
 ## PARAMETERS
 
 ### -Headers
+
 Hash containing HTTP headers for the request
 
 ```yaml
 Type: Hashtable
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -46,12 +49,13 @@ Accept wildcard characters: False
 ```
 
 ### -Method
+
 HTTP method for the web request
 
 ```yaml
 Type: WebRequestMethod
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Default, Get, Head, Post, Put, Delete, Trace, Options, Merge, Patch
 
 Required: False
@@ -62,12 +66,13 @@ Accept wildcard characters: False
 ```
 
 ### -Scheme
+
 Currently the function only supports basic authentication
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Basic
 
 Required: False
@@ -78,12 +83,13 @@ Accept wildcard characters: False
 ```
 
 ### -Token
+
 API token of the specified user
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 5
@@ -93,12 +99,13 @@ Accept wildcard characters: False
 ```
 
 ### -Uri
+
 URI of the target server for the request
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -108,12 +115,13 @@ Accept wildcard characters: False
 ```
 
 ### -User
+
 Name of the user used for authentication
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 4
@@ -126,7 +134,6 @@ Accept wildcard characters: False
 
 ### None
 
-
 ## OUTPUTS
 
 ### System.Object
@@ -134,4 +141,3 @@ Accept wildcard characters: False
 ## NOTES
 
 ## RELATED LINKS
-
