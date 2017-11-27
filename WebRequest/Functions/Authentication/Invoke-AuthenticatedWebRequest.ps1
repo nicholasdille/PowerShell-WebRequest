@@ -30,6 +30,11 @@ function Invoke-AuthenticatedWebRequest {
         [ValidateNotNullOrEmpty()]
         [string]
         $Token
+        ,
+        [Parameter()]
+        [ValidateNotNullOrEmpty()]
+        [string]
+        $Body
     )
 
     if ($User -and $Token -and -not $Headers.ContainsKey('Authorization')) {
@@ -41,6 +46,9 @@ function Invoke-AuthenticatedWebRequest {
         Uri = $Uri
         Method = $Method
         Headers = $Headers
+    }
+    if ($Body) {
+        $IwrParams.Add('Body', $Body)
     }
 
     Invoke-WebRequest @IwrParams
