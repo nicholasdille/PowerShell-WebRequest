@@ -124,7 +124,11 @@ function Invoke-RestMethod {
             }
         }
 
+        $ConfiguredProtocols = [System.Net.ServicePointManager]::SecurityProtocol
+        [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]'Tls11,Tls12'
         $Response = Microsoft.PowerShell.Utility\Invoke-WebRequest @WrappedParameters
+        [System.Net.ServicePointManager]::SecurityProtocol = $ConfiguredProtocols
+
         Add-CachedWebRequest -Uri $Uri -Response $Response
         $Response.Content | ConvertFrom-Json
         
