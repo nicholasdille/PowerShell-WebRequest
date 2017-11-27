@@ -1,6 +1,8 @@
-# 0.1.x
+# 0.1.20
 
 - Improved documentation
+- Added body for authenticated requests
+- Fixed protocols (TLS 1.1 and 1.2)
 
 # 0.1.18
 
