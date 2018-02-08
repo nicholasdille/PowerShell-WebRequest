@@ -1,3 +1,10 @@
+# 0.2.0.x
+
+- Migrated to centralized build tools
+- Updated to three part version numbers
+- Added cmdlets to analyze HTTP access logs
+- Added required modules to manifest
+
 # 0.1.20
 
 - Improved documentation
