@@ -10,7 +10,7 @@
     RequiredModules = @(
         @{
             ModuleName = 'Helpers'
-            RequiredVersion = '0.2'
+            RequiredVersion = '0.2.0.16'
         }
     )
     FunctionsToExport = @(
