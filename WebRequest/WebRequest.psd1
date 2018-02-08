@@ -7,7 +7,12 @@
     Copyright = '(c) 2017 Nicholas Dille. All rights reserved.'
     Description = 'This modules provides an overload for Invoke-WebRequest as well as Invoke-RestMethod including basic authentication and response caching'
     # PowerShellVersion = ''
-    # RequiredModules = @()
+    RequiredModules = @(
+        @{
+            ModuleName = 'Helpers'
+            RequiredVersion = '0.2'
+        }
+    )
     FunctionsToExport = @(
         'Add-CachedWebRequest'
         'Clear-CachedWebRequest'
