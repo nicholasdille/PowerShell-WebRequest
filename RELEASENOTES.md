@@ -1,4 +1,10 @@
-# 0.2.0.26
+# Release Notes
+
+## 0.2.1.27
+
+- Updated for new formt of release notes
+
+## 0.2.0.26
 
 - Migrated to centralized build tools
 - Updated to three part version numbers
@@ -6,26 +12,26 @@
 - Added required modules to manifest
 - Using full version numbers for required modules
 
-# 0.1.20
+## 0.1.20
 
 - Improved documentation
 - Added body for authenticated requests
 - Fixed protocols (TLS 1.1 and 1.2)
 
-# 0.1.18
+## 0.1.18
 
 - Added proxy support
 
-# 0.1.14
+## 0.1.14
 
 - Added documentation
 
-# 0.1.12
+## 0.1.12
 
 - Changed default behaviour to bypass cache
 - Updated build tools
 - Improved quality by using script analyzer
 
-# 0.1.4
+#s# 0.1.4
 
 - Initial release

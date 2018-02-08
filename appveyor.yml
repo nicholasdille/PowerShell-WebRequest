@@ -2,7 +2,7 @@ version: '{build}'
 skip_tags: true
 
 environment:
-  BuildToolsVersion: '1.0.*'
+  BuildToolsVersion: '1.1.*'
   StatementCoverageThreshold: 0
   FunctionCoverageThreshold: 0
   SkipUnitTests: true
